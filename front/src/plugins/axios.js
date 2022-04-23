@@ -1,6 +1,6 @@
 "use strict";
 
-import Vue from 'vue';
+import {createApp} from 'vue';
 import axios from "axios";
 
 // Full config:  https://github.com/axios/axios#request-config
@@ -39,10 +39,11 @@ _axios.interceptors.response.use(
   }
 );
 
+// eslint-disable-next-line no-unused-vars
 Plugin.install = function(Vue, options) {
   Vue.axios = _axios;
   window.axios = _axios;
-  Object.defineProperties(Vue.prototype, {
+  Object.defineProperties(createApp().prototype, {
     axios: {
       get() {
         return _axios;
@@ -56,6 +57,6 @@ Plugin.install = function(Vue, options) {
   });
 };
 
-Vue.use(Plugin)
+// createApp().use(Plugin);
 
 export default Plugin;
