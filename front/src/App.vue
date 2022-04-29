@@ -1,9 +1,18 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <div id="app">
+    <ul>
+      <li style="left: auto">
+        <router-link to="/">Home</router-link>
+      </li>
+      <li>
+        <router-link to="/about">About</router-link>
+      </li>
+      <li>
+        <router-link to="/login">login</router-link>
+      </li>
+    </ul>
+    <router-view/>
+  </div>
 </template>
 
 <style>

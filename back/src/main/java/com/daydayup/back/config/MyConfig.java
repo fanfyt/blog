@@ -15,7 +15,8 @@ public class MyConfig extends WebSecurityConfigurerAdapter {
         BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
         //使用内存用户信息，方便测试
         auth.inMemoryAuthentication().passwordEncoder(encoder)
-                .withUser("lisi").password(encoder.encode("lisis")).roles("vip");
+                .withUser("fl").password(encoder.encode("fl")).roles("admin").and()
+                .withUser("xz").password(encoder.encode("xz")).roles("admin");
     }
 
 }

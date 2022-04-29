@@ -1,13 +1,11 @@
 <template>
   <div>
     Login......
+    <el-button type="danger" :icon="Delete" circle />
   </div>
 </template>
+<script lang="ts" setup>
 
-<script>
-export default {
-  name: "loginPage"
-}
 </script>
 
 <style scoped>
