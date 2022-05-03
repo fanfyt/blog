@@ -3,8 +3,8 @@ spring:
         driver-class-name: com.mysql.cj.jdbc.Driver
         username: xuzhen
         password: 123
-        url: localhost:3307/blog_system
-
+        url: jdbc:mysql://localhost:3307/blog_system?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+        type: com.alibaba.druid.pool.DruidDataSource
 mybatis:
-    config-location:
-    mapper-locations:
+    config-location: classpath:mybatis-config.xml
+    mapper-locations: classpath:mapper/**/*.xml

@@ -1,11 +1,11 @@
 spring:
     datasource:
-        driver-class-name: com.mysql.cj.jdbc.Driver
+#        driver-class-name: com.mysql.cj.jdbc.Driver
         username: xuzhen
         password: 123
-        url: localhost:3307/blog_system
+        url: jdbc:mysql://localhost:3307/blog_system?serverTimezone-UTC
 
 mybatis:
     config-location:
-    mapper-locations:
-    
+    mapper-locations: classpath:mapper/**/*.xml
+    type-aliases-package: com.daydayup.back.entity
