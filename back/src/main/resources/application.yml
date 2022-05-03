@@ -1,0 +1,10 @@
+spring:
+    datasource:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        username: xuzhen
+        password: 123
+        url: localhost:3307/blog_system
+
+mybatis:
+    config-location:
+    mapper-locations:
