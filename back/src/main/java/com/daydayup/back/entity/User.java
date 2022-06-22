@@ -1,8 +1,13 @@
 package com.daydayup.back.entity;
 
+import com.baomidou.mybatisplus.annotation.TableName;
 import org.springframework.data.relational.core.sql.In;
 import sun.security.util.Password;
 
+/**
+ * @author FL
+ */
+@TableName("user")
 public class User {
     private Integer id;
     private Integer number;

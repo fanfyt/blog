@@ -19,7 +19,8 @@ public class MyConfig extends WebSecurityConfigurerAdapter {
         //使用内存用户信息，方便测试
         auth.inMemoryAuthentication().passwordEncoder(encoder)
                 .withUser("fl").password(encoder.encode("fl")).roles("admin").and()
-                .withUser("xz").password(encoder.encode("xz")).roles("admin");
+                .withUser("xz").password(encoder.encode("xz")).roles("admin").and()
+                .withUser("xm").password(encoder.encode("xm")).roles("admin");
     }
 
 }
