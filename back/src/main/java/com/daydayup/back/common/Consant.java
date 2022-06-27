@@ -1,4 +1,4 @@
-package common;
+package com.daydayup.back.common;
 
 /**
  * @author zhouxm
