@@ -4,7 +4,9 @@ import java.util.Date;
 import java.util.List;
 
 /**
+ * 评论基本类
  * @author zhouxm
+ *
  */
 public class commentPo {
 
