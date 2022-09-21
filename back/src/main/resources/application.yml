@@ -1,9 +1,9 @@
 spring:
     datasource:
         driver-class-name: com.mysql.cj.jdbc.Driver
-        username: xuzhen
-        password: 123
-        url: jdbc:mysql://localhost:3307/blog_system?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+        username: liang
+        password: liang
+        url: jdbc:mysql://localhost:3306/blog_system?useUnicode=true&characterEncoding=UTF-8&useSSL=false
         type: com.alibaba.druid.pool.DruidDataSource
 mybatis:
     config-location: classpath:mybatis-config.xml

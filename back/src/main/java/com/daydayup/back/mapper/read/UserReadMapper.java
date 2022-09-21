@@ -4,5 +4,7 @@ import com.daydayup.back.entity.User;
 
 public interface UserReadMapper {
 
-    User getUserById(User user);
+    User getUserById(Integer id);
+
+    User getUserByName(String name);
 }

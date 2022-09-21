@@ -5,6 +5,9 @@ import com.daydayup.back.mapper.read.UserReadMapper;
 import com.daydayup.back.service.read.UserReadService;
 import org.springframework.beans.factory.annotation.Autowired;
 
+/**
+ * @author FL
+ */
 public class UserReadServiceImpl implements UserReadService {
 
     @Autowired

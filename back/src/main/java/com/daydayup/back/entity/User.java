@@ -1,8 +1,6 @@
 package com.daydayup.back.entity;
 
 import com.baomidou.mybatisplus.annotation.TableName;
-import org.springframework.data.relational.core.sql.In;
-import sun.security.util.Password;
 
 /**
  * @author FL
@@ -15,7 +13,7 @@ public class User {
     private String password;
     private String email;
     private String phone;
-    private String create_time;
+    private String createTime;
     private boolean state;
 
     public User() {
@@ -69,12 +67,12 @@ public class User {
         this.phone = phone;
     }
 
-    public String getCreate_time() {
-        return create_time;
+    public String getCreateTime() {
+        return createTime;
     }
 
-    public void setCreate_time(String create_time) {
-        this.create_time = create_time;
+    public void setCreateTime(String createTime) {
+        this.createTime = createTime;
     }
 
     public boolean isState() {
@@ -94,7 +92,7 @@ public class User {
                 ", password='" + password + '\'' +
                 ", email='" + email + '\'' +
                 ", phone='" + phone + '\'' +
-                ", create_time='" + create_time + '\'' +
+                ", createTime='" + createTime + '\'' +
                 ", state=" + state +
                 '}';
     }
