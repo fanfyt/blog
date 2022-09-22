@@ -1,4 +1,4 @@
-package com.daydayup.back.controller;
+package com.daydayup.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

@@ -1,6 +1,6 @@
-package com.daydayup.back.mapper.read;
+package com.daydayup.mapper.read;
 
-import com.daydayup.back.entity.User;
+import com.daydayup.entity.User;
 
 public interface UserReadMapper {
 

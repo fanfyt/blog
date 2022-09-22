@@ -1,15 +1,16 @@
-package com.daydayup.back.config;
+package com.daydayup.config;
 
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
-@EnableWebSecurity
+
 /**
  * @author FL
  */
-public class MyConfig extends WebSecurityConfigurerAdapter {
+@EnableWebSecurity
+public class SecurityConfigAdapter extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {

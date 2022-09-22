@@ -1,8 +1,12 @@
-package com.daydayup.back.service.read;
+package com.daydayup.service.read;
 
-import com.daydayup.back.entity.User;
+import com.daydayup.entity.User;
 
+/**
+ * @author FL
+ */
 public interface UserReadService {
+
     User getUserById(Integer id);
 
     User getUserByName(String user);

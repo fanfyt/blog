@@ -1,6 +1,6 @@
-package com.daydayup.back.securityService.read;
+package com.daydayup.securityService.read;
 
-import com.daydayup.back.entity.Authority;
+import com.daydayup.entity.Authority;
 
 import java.util.List;
 

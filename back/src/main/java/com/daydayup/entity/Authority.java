@@ -1,4 +1,4 @@
-package com.daydayup.back.entity;
+package com.daydayup.entity;
 
 
 /**

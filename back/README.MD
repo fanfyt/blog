@@ -7,18 +7,18 @@
 版本一
 -
 
-一、技术框架：（ 具体版本暂未确定）
+一、技术框架：（ 具体版本暂未确定）  
 
-    1. spring boot
-    2. thymeleaf
-    3. mysql 数据库
-    4. redis 缓存
-    5. elasticSearch
-    6. maven
-    7. spring security
-    8. slf4j
-    9. vue.js
-    10. free maker
+1. spring boot
+2. thymeleaf
+3. mysql 数据库
+4. redis 缓存
+5. elasticSearch
+6. maven
+7. spring security
+8. slf4j
+9. vue.js
+10. free maker
 
 二、开发计划：
 
