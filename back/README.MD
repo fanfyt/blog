@@ -11,14 +11,16 @@
 
 1. spring boot
 2. thymeleaf
-3. mysql 数据库
-4. redis 缓存
-5. elasticSearch
-6. maven
-7. spring security
-8. slf4j
-9. vue.js
-10. free maker
+3. mybatis
+4. mybatis-plus
+5. mysql 数据库
+6. redis 缓存
+7. elasticSearch
+8. maven
+9. spring security
+10. slf4j
+11. vue.js
+12. free maker
 
 二、开发计划：
 
