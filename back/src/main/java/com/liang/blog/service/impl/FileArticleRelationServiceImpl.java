@@ -1,9 +1,9 @@
 package com.liang.blog.service.impl;
 
-import com.liang.blog.po.FileArticleRelation;
-import com.liang.blog.mapper.FileArticleRelationMapper;
-import com.liang.blog.service.IFileArticleRelationService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.liang.blog.mapper.FileArticleRelationMapper;
+import com.liang.blog.po.FileArticleRelation;
+import com.liang.blog.service.IFileArticleRelationService;
 import org.springframework.stereotype.Service;
 
 /**

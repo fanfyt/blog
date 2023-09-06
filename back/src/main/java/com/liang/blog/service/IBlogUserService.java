@@ -1,11 +1,11 @@
 package com.liang.blog.service;
 
-import com.liang.blog.po.BlogUser;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.liang.blog.po.BlogUser;
 
 /**
  * <p>
- *  服务类
+ * 服务类
  * </p>
  *
  * @author baomidou

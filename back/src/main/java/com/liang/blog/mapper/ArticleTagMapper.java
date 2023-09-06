@@ -1,11 +1,11 @@
 package com.liang.blog.mapper;
 
-import com.liang.blog.po.ArticleTag;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.liang.blog.po.ArticleTag;
 
 /**
  * <p>
- *  Mapper 接口
+ * Mapper 接口
  * </p>
  *
  * @author baomidou

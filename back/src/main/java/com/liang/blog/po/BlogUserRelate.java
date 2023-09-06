@@ -3,6 +3,7 @@ package com.liang.blog.po;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+
 import java.io.Serializable;
 import java.time.LocalDate;
 
@@ -101,12 +102,12 @@ public class BlogUserRelate implements Serializable {
     @Override
     public String toString() {
         return "BlogUserRelate{" +
-        "id = " + id +
-        ", followerUserId = " + followerUserId +
-        ", beFollowedUserId = " + beFollowedUserId +
-        ", followTime = " + followTime +
-        ", disfollowTime = " + disfollowTime +
-        ", state = " + state +
-        "}";
+                "id = " + id +
+                ", followerUserId = " + followerUserId +
+                ", beFollowedUserId = " + beFollowedUserId +
+                ", followTime = " + followTime +
+                ", disfollowTime = " + disfollowTime +
+                ", state = " + state +
+                "}";
     }
 }

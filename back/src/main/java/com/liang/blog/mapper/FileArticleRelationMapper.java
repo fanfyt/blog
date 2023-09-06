@@ -1,7 +1,7 @@
 package com.liang.blog.mapper;
 
-import com.liang.blog.po.FileArticleRelation;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.liang.blog.po.FileArticleRelation;
 
 /**
  * <p>

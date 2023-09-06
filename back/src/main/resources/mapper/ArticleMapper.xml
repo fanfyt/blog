@@ -3,6 +3,7 @@
 <mapper namespace="com.liang.blog.mapper.ArticleMapper">
 
     <select id="list" resultType="java.lang.Object">
-        select * from article
+        select *
+        from article
     </select>
 </mapper>

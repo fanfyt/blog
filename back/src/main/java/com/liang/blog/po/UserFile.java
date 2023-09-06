@@ -3,6 +3,7 @@ package com.liang.blog.po;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+
 import java.io.Serializable;
 import java.time.LocalDate;
 
@@ -111,13 +112,13 @@ public class UserFile implements Serializable {
     @Override
     public String toString() {
         return "UserFile{" +
-        "id = " + id +
-        ", userId = " + userId +
-        ", fileName = " + fileName +
-        ", filePath = " + filePath +
-        ", fileType = " + fileType +
-        ", fileSize = " + fileSize +
-        ", saveTime = " + saveTime +
-        "}";
+                "id = " + id +
+                ", userId = " + userId +
+                ", fileName = " + fileName +
+                ", filePath = " + filePath +
+                ", fileType = " + fileType +
+                ", fileSize = " + fileSize +
+                ", saveTime = " + saveTime +
+                "}";
     }
 }

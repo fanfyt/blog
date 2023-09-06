@@ -1,7 +1,7 @@
 package com.liang.blog.service;
 
-import com.liang.blog.po.ArticleCollectRelation;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.liang.blog.po.ArticleCollectRelation;
 
 /**
  * <p>

@@ -2,12 +2,13 @@ package com.liang.blog.po;
 
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
+
 import java.io.Serializable;
 import java.time.LocalDate;
 
 /**
  * <p>
- * 
+ *
  * </p>
  *
  * @author baomidou
@@ -81,11 +82,11 @@ public class AuthMid implements Serializable {
     @Override
     public String toString() {
         return "AuthMid{" +
-        "id = " + id +
-        ", userId = " + userId +
-        ", authId = " + authId +
-        ", createTime = " + createTime +
-        ", type = " + type +
-        "}";
+                "id = " + id +
+                ", userId = " + userId +
+                ", authId = " + authId +
+                ", createTime = " + createTime +
+                ", type = " + type +
+                "}";
     }
 }

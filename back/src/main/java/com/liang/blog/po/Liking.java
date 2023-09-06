@@ -1,12 +1,13 @@
 package com.liang.blog.po;
 
 import com.baomidou.mybatisplus.annotation.TableField;
+
 import java.io.Serializable;
 import java.time.LocalDate;
 
 /**
  * <p>
- * 
+ *
  * </p>
  *
  * @author baomidou
@@ -32,7 +33,7 @@ public class Liking implements Serializable {
     private Long articleOrCommentId;
 
     /**
-     * 赞/踩 
+     * 赞/踩
      */
     private Byte isLike;
 
@@ -43,7 +44,7 @@ public class Liking implements Serializable {
     private LocalDate time;
 
     /**
-     * 0文章动态评论  1评论评论 
+     * 0文章动态评论  1评论评论
      */
     @TableField("`type`")
     private Byte type;
@@ -99,12 +100,12 @@ public class Liking implements Serializable {
     @Override
     public String toString() {
         return "Liking{" +
-        "id = " + id +
-        ", blogUserId = " + blogUserId +
-        ", articleOrCommentId = " + articleOrCommentId +
-        ", isLike = " + isLike +
-        ", time = " + time +
-        ", type = " + type +
-        "}";
+                "id = " + id +
+                ", blogUserId = " + blogUserId +
+                ", articleOrCommentId = " + articleOrCommentId +
+                ", isLike = " + isLike +
+                ", time = " + time +
+                ", type = " + type +
+                "}";
     }
 }

@@ -1,11 +1,12 @@
 package com.liang.blog.po;
 
 import com.baomidou.mybatisplus.annotation.TableName;
+
 import java.io.Serializable;
 
 /**
  * <p>
- * 
+ *
  * </p>
  *
  * @author baomidou
@@ -42,8 +43,8 @@ public class ArticleTag implements Serializable {
     @Override
     public String toString() {
         return "ArticleTag{" +
-        "id = " + id +
-        ", tagName = " + tagName +
-        "}";
+                "id = " + id +
+                ", tagName = " + tagName +
+                "}";
     }
 }

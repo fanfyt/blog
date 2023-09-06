@@ -4,11 +4,12 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+
 import java.io.Serializable;
 
 /**
  * <p>
- * 
+ *
  * </p>
  *
  * @author baomidou
@@ -102,12 +103,12 @@ public class UserCategory implements Serializable {
     @Override
     public String toString() {
         return "UserCategory{" +
-        "id = " + id +
-        ", userId = " + userId +
-        ", categoryName = " + categoryName +
-        ", upperCategoryId = " + upperCategoryId +
-        ", grade = " + grade +
-        ", type = " + type +
-        "}";
+                "id = " + id +
+                ", userId = " + userId +
+                ", categoryName = " + categoryName +
+                ", upperCategoryId = " + upperCategoryId +
+                ", grade = " + grade +
+                ", type = " + type +
+                "}";
     }
 }

@@ -3,12 +3,13 @@ package com.liang.blog.po;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
+
 import java.io.Serializable;
 import java.time.LocalDate;
 
 /**
  * <p>
- * 
+ *
  * </p>
  *
  * @author baomidou
@@ -75,10 +76,10 @@ public class Auth implements Serializable {
     @Override
     public String toString() {
         return "Auth{" +
-        "id = " + id +
-        ", authName = " + authName +
-        ", describe = " + describe +
-        ", createTime = " + createTime +
-        "}";
+                "id = " + id +
+                ", authName = " + authName +
+                ", describe = " + describe +
+                ", createTime = " + createTime +
+                "}";
     }
 }

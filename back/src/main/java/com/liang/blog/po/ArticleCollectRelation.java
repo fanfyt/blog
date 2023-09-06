@@ -1,6 +1,7 @@
 package com.liang.blog.po;
 
 import com.baomidou.mybatisplus.annotation.TableName;
+
 import java.io.Serializable;
 import java.time.LocalDate;
 
@@ -82,11 +83,11 @@ public class ArticleCollectRelation implements Serializable {
     @Override
     public String toString() {
         return "ArticleCollectRelation{" +
-        "id = " + id +
-        ", userId = " + userId +
-        ", articleId = " + articleId +
-        ", categoryId = " + categoryId +
-        ", collectTime = " + collectTime +
-        "}";
+                "id = " + id +
+                ", userId = " + userId +
+                ", articleId = " + articleId +
+                ", categoryId = " + categoryId +
+                ", collectTime = " + collectTime +
+                "}";
     }
 }

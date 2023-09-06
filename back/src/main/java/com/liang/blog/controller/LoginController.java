@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class LoginController {
 
     @GetMapping("/")
-    public String initail(){
+    public String initail() {
 
         return "default page";
     }

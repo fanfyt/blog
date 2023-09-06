@@ -3,6 +3,7 @@ package com.liang.blog.po;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+
 import java.io.Serializable;
 import java.time.LocalDate;
 
@@ -85,11 +86,11 @@ public class FileArticleRelation implements Serializable {
     @Override
     public String toString() {
         return "FileArticleRelation{" +
-        "id = " + id +
-        ", fileId = " + fileId +
-        ", userId = " + userId +
-        ", articleId = " + articleId +
-        ", saveTime = " + saveTime +
-        "}";
+                "id = " + id +
+                ", fileId = " + fileId +
+                ", userId = " + userId +
+                ", articleId = " + articleId +
+                ", saveTime = " + saveTime +
+                "}";
     }
 }

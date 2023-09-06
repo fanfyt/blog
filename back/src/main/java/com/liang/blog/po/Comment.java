@@ -2,12 +2,13 @@ package com.liang.blog.po;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
+
 import java.io.Serializable;
 import java.time.LocalDate;
 
 /**
  * <p>
- * 
+ *
  * </p>
  *
  * @author baomidou
@@ -83,11 +84,11 @@ public class Comment implements Serializable {
     @Override
     public String toString() {
         return "Comment{" +
-        "id = " + id +
-        ", blogUserId = " + blogUserId +
-        ", articleId = " + articleId +
-        ", createTime = " + createTime +
-        ", state = " + state +
-        "}";
+                "id = " + id +
+                ", blogUserId = " + blogUserId +
+                ", articleId = " + articleId +
+                ", createTime = " + createTime +
+                ", state = " + state +
+                "}";
     }
 }

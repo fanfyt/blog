@@ -1,14 +1,12 @@
 package com.liang.blog.service;
 
-import com.liang.blog.po.Article;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.liang.blog.po.Article;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 /**
  * <p>
- *  服务类
+ * 服务类
  * </p>
  *
  * @author baomidou

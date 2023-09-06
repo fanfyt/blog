@@ -1,6 +1,7 @@
 package com.liang.blog.po;
 
 import com.baomidou.mybatisplus.annotation.TableName;
+
 import java.io.Serializable;
 
 /**
@@ -55,9 +56,9 @@ public class TagRelation implements Serializable {
     @Override
     public String toString() {
         return "TagRelation{" +
-        "id = " + id +
-        ", tagId = " + tagId +
-        ", articleId = " + articleId +
-        "}";
+                "id = " + id +
+                ", tagId = " + tagId +
+                ", articleId = " + articleId +
+                "}";
     }
 }

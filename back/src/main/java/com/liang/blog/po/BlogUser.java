@@ -2,12 +2,13 @@ package com.liang.blog.po;
 
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
+
 import java.io.Serializable;
 import java.time.LocalDate;
 
 /**
  * <p>
- * 
+ *
  * </p>
  *
  * @author baomidou
@@ -159,19 +160,19 @@ public class BlogUser implements Serializable {
     @Override
     public String toString() {
         return "BlogUser{" +
-        "id = " + id +
-        ", name = " + name +
-        ", password = " + password +
-        ", gender = " + gender +
-        ", birthday = " + birthday +
-        ", email = " + email +
-        ", phone = " + phone +
-        ", createTime = " + createTime +
-        ", school = " + school +
-        ", areaCode = " + areaCode +
-        ", grade = " + grade +
-        ", provinceCode = " + provinceCode +
-        ", state = " + state +
-        "}";
+                "id = " + id +
+                ", name = " + name +
+                ", password = " + password +
+                ", gender = " + gender +
+                ", birthday = " + birthday +
+                ", email = " + email +
+                ", phone = " + phone +
+                ", createTime = " + createTime +
+                ", school = " + school +
+                ", areaCode = " + areaCode +
+                ", grade = " + grade +
+                ", provinceCode = " + provinceCode +
+                ", state = " + state +
+                "}";
     }
 }

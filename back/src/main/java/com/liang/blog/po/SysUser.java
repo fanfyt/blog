@@ -4,12 +4,13 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+
 import java.io.Serializable;
 import java.time.LocalDate;
 
 /**
  * <p>
- * 
+ *
  * </p>
  *
  * @author baomidou
@@ -100,12 +101,12 @@ public class SysUser implements Serializable {
     @Override
     public String toString() {
         return "SysUser{" +
-        "id = " + id +
-        ", grade = " + grade +
-        ", createTime = " + createTime +
-        ", name = " + name +
-        ", pswd = " + pswd +
-        ", state = " + state +
-        "}";
+                "id = " + id +
+                ", grade = " + grade +
+                ", createTime = " + createTime +
+                ", name = " + name +
+                ", pswd = " + pswd +
+                ", state = " + state +
+                "}";
     }
 }
