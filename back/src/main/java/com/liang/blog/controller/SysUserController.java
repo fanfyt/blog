@@ -12,7 +12,7 @@ import org.springframework.stereotype.Controller;
  * @since 2023-08-27
  */
 @Controller
-@RequestMapping("/blogUser")
-public class BlogUserController {
+@RequestMapping("/sysUser")
+public class SysUserController {
 
 }

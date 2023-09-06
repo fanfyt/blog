@@ -5,14 +5,14 @@ import org.springframework.stereotype.Controller;
 
 /**
  * <p>
- *  前端控制器
+ * 收藏文章关联关系表 前端控制器
  * </p>
  *
  * @author baomidou
  * @since 2023-08-27
  */
 @Controller
-@RequestMapping("/blogUser")
-public class BlogUserController {
+@RequestMapping("/articleCollectRelation")
+public class ArticleCollectRelationController {
 
 }

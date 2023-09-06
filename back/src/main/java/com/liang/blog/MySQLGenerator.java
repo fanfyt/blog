@@ -7,7 +7,6 @@ import com.baomidou.mybatisplus.generator.config.DataSourceConfig;
 import com.baomidou.mybatisplus.generator.config.rules.DateType;
 import com.baomidou.mybatisplus.generator.keywords.MySqlKeyWordsHandler;
 import com.liang.blog.config.MyMapperCache;
-import com.liang.blog.controller.BlogAbstractController;
 import org.junit.Test;
 
 /**
@@ -41,10 +40,10 @@ public class MySQLGenerator extends BaseGeneratorTest {
                 .build());
 
         // controller
-        generator.strategy(strategyConfig().controllerBuilder()
-                .enableRestStyle()
-                .superClass(BlogAbstractController.class)
-                .build());
+//        generator.strategy(strategyConfig().controllerBuilder()
+//                .enableRestStyle()
+//                .superClass(BlogAbstractController.class)
+//                .build());
 
         // mapper
         generator.strategy(strategyConfig().mapperBuilder()
