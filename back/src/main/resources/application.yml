@@ -16,17 +16,6 @@ mybatis:
   mapper-locations: classpath:mapper/*.xml  # 指定Mapper XML文件的位置，这里假设XML文件放在resources/mapper目录下
 
 
-mybatis-plus:
-  configuration:
-    map-underscore-to-camel-case: true # 将数据库表字段映射到Java属性时，使用驼峰命名规则
-  mapper-locations: classpath:mapper/*.xml # Mapper XML 文件的位置，根据你的项目结构进行调整
-  global-config:
-    db-config:
-      id-type: auto # 主键生成策略，可选值有 auto、none、input、assign、UUID 等
-  # 以下是分页插件的配置
-  interceptor:
-    - com.baomidou.mybatisplus.extension.plugins.inner.PaginationInnerInterceptor
-
 
 logging:
   level:
