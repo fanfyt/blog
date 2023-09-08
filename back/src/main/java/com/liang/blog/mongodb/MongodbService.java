@@ -13,8 +13,8 @@ public class MongodbService {
     public final ArticleRepository aricleRepository;
 
     @Autowired
-    public MongodbService(ArticleRepository aricleRepository) {
-        this.aricleRepository = aricleRepository;
+    public MongodbService(ArticleRepository articleRepository) {
+        this.aricleRepository = articleRepository;
     }
 
     /**
