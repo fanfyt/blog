@@ -1,0 +1,18 @@
+# mongodb 数据库集合配置
+
+# 文章集合
+article:
+  id,
+  content
+
+# 评论集合
+comment:
+  mainId,
+  id,
+  content
+
+test:
+  test:
+    test: 123
+
+

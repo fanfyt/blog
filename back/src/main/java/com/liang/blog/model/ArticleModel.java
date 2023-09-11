@@ -1,5 +1,6 @@
 package com.liang.blog.model;
 
+import com.liang.blog.mongodb.ArticleData;
 import com.liang.blog.po.Article;
 
 /**
@@ -15,12 +16,12 @@ public class ArticleModel {
     /**
      * 文章内容
      */
-    private String content;
+    private ArticleData content;
 
     public ArticleModel() {
     }
 
-    public ArticleModel(Article article, String content) {
+    public ArticleModel(Article article, ArticleData content) {
         this.article = article;
         this.content = content;
     }
@@ -33,11 +34,19 @@ public class ArticleModel {
         this.article = article;
     }
 
+    public ArticleData getContent() {
+        return content;
+    }
+
+    public void setContent(ArticleData content) {
+        this.content = content;
+    }
+
     @Override
     public String toString() {
         return "ArticleModel{" +
                 "article=" + article +
-                ", content='" + content + '\'' +
+                ", content=" + content +
                 '}';
     }
 }

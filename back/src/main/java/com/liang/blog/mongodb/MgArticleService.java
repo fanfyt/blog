@@ -8,13 +8,13 @@ import org.springframework.stereotype.Service;
  * @author liang
  */
 @Service
-public class MongodbService {
+public class MgArticleService {
 
-    public final ArticleRepository aricleRepository;
+    public final ArticleRepository articleRepository;
 
     @Autowired
-    public MongodbService(ArticleRepository articleRepository) {
-        this.aricleRepository = articleRepository;
+    public MgArticleService(ArticleRepository articleRepository) {
+        this.articleRepository = articleRepository;
     }
 
     /**
@@ -24,7 +24,8 @@ public class MongodbService {
      * @return ArticleData
      */
     public ArticleData saveArticle(ArticleData articleData) {
-        return aricleRepository.save(articleData);
+
+        return articleRepository.save(articleData);
     }
 
     /**
@@ -34,7 +35,7 @@ public class MongodbService {
      * @return ArticleData
      */
     public ArticleData findArticleById(String id) {
-        return aricleRepository.findById(id).orElse(null);
+        return articleRepository.findById(id).orElse(null);
     }
 
 }

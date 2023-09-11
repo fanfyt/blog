@@ -3,6 +3,7 @@ package com.liang.blog.po;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.io.Serializable;
 import java.time.LocalDate;
@@ -36,22 +37,38 @@ public class Article implements Serializable {
     /**
      * 创作时间
      */
+    @DateTimeFormat
     private LocalDate createTime;
 
     /**
      * 最近更新时间
      */
+    @DateTimeFormat
     private LocalDate updateTime;
 
     /**
      * 发布时间
      */
+    @DateTimeFormat
     private LocalDate publishTime;
 
     /**
      * 文章状态
      */
     private Byte state;
+
+    public Article() {
+    }
+
+    public Article(Long id, Long blogUserId, String title, LocalDate createTime, LocalDate updateTime, LocalDate publishTime, Byte state) {
+        this.id = id;
+        this.blogUserId = blogUserId;
+        this.title = title;
+        this.createTime = createTime;
+        this.updateTime = updateTime;
+        this.publishTime = publishTime;
+        this.state = state;
+    }
 
     public Long getId() {
         return id;
