@@ -1,7 +1,12 @@
 package com.liang.blog.controller;
 
+import com.liang.blog.po.ArticleTag;
+import jakarta.annotation.Resource;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import java.util.List;
 
 /**
  * <p>
@@ -14,5 +19,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("/articleTag")
 public class ArticleTagController {
+
+    @Resource
+    public Object setArticleTag(@RequestBody List<ArticleTag> tagList) {
+
+        return null;
+    }
 
 }
