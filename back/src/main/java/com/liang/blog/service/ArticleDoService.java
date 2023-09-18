@@ -15,5 +15,5 @@ public interface ArticleDoService {
      *
      * @param articleModel 文章
      */
-    void saveArticleModel(ArticleModel articleModel);
+    boolean saveArticleModel(ArticleModel articleModel);
 }

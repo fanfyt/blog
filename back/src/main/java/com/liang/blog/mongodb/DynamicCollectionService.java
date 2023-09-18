@@ -27,12 +27,21 @@ public class DynamicCollectionService {
      * @param collectionName 集合
      * @param dataField      列名称
      */
-    public DynamicCollectionEntity saveToDynamicCollection(String collectionName, String dataField) {
+    public DynamicCollectionEntity saveToDynamicCollection(String collectionName, Object dataField) {
         DynamicCollectionEntity entity = new DynamicCollectionEntity();
         entity.setDynamicCollectionName(collectionName);
-        entity.setDataField(dataField);
+        entity.setDynamicCollectionName("shazi");
+        entity.setDataField(String.valueOf(dataField));
+
 
         // 使用动态集合名称保存文档
         return mongoTemplate.save(entity, collectionName);
+
+
+    }
+
+    public void insert(Object obj) {
+        mongoTemplate.insert(obj);
+
     }
 }

@@ -22,7 +22,7 @@ public class ArticleDoServiceImpl implements ArticleDoService {
     ArticleService articleService;
 
     @Override
-    public void saveArticleModel(ArticleModel articleModel) {
+    public boolean saveArticleModel(ArticleModel articleModel) {
 
         // 文章保存到mongodb
         ArticleData articleData = mgArticleService.saveArticle(articleModel.getContent());
@@ -30,8 +30,6 @@ public class ArticleDoServiceImpl implements ArticleDoService {
         // 文章信息保存到mysql
         Article article = articleModel.getArticle();
 
-        boolean save = articleService.save(article);
-        System.out.println(save);
-
+        return articleService.save(article);
     }
 }

@@ -1,6 +1,7 @@
 package com.liang.blog.controller;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.liang.blog.config.sys.Result;
 import com.liang.blog.model.ArticleModel;
 import com.liang.blog.mongodb.ArticleData;
 import com.liang.blog.po.Article;
@@ -53,10 +54,9 @@ public class ArticleController {
      * @return Object
      */
     @PostMapping("add")
-    public Object add(@RequestBody ArticleModel article) {
+    public Result add(@RequestBody ArticleModel article) {
 
-        articleDoService.saveArticleModel(article);
-        return null;
+        return Result.sucess(articleDoService.saveArticleModel(article));
     }
 
 
