@@ -41,8 +41,6 @@ public class ArticleDoServiceImpl implements ArticleDoService {
             boolean save = articleService.save(article);
             // 文章保存到 mongodb
             ArticleData articleData = mgArticleService.saveArticle(articleModel.getContent());
-            ArticleData save1 = mongoTemplate.save(articleModel.getContent());
-            System.out.println("save1" + save1);
             return save;
         } catch (Exception e) {
             log.error(e.getMessage());
