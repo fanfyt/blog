@@ -1,10 +1,10 @@
 package com.liang.blog.mongodb;
 
 
-import com.liang.blog.config.mongodb.DynamicCollectionEntity;
-import com.liang.blog.util.MongoCollection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
  * @author liang
@@ -13,12 +13,10 @@ import org.springframework.stereotype.Service;
 public class MgArticleService {
 
     public final ArticleRepository articleRepository;
-    public final DynamicCollectionService dynamicCollectionService;
 
     @Autowired
-    public MgArticleService(ArticleRepository articleRepository, DynamicCollectionService dynamicCollectionService) {
+    public MgArticleService(ArticleRepository articleRepository) {
         this.articleRepository = articleRepository;
-        this.dynamicCollectionService = dynamicCollectionService;
     }
 
     /**
@@ -28,8 +26,6 @@ public class MgArticleService {
      * @return ArticleData
      */
     public ArticleData saveArticle(ArticleData articleData) {
-        DynamicCollectionEntity dynamicCollection = dynamicCollectionService.saveToDynamicCollection(MongoCollection.ARTICLE, articleData);
-        System.out.println(dynamicCollection.getDataField());
         return articleRepository.save(articleData);
     }
 
@@ -41,6 +37,15 @@ public class MgArticleService {
      */
     public ArticleData findArticleById(String id) {
         return articleRepository.findById(id).orElse(null);
+    }
+
+    /**
+     * 批量删除
+     *
+     * @param list 待删除文章id列表
+     */
+    public void delArticles(List<String> list) {
+        articleRepository.deleteAllById(list);
     }
 
 }
