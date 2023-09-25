@@ -29,6 +29,14 @@ public interface ArticleDoService {
 
 
     /**
+     * 根据作者id获取文章列表
+     *
+     * @param authorId 作者id
+     * @return
+     */
+    List<Object> getArticleContentByAuthorId(Long authorId);
+
+    /**
      * 删除文章
      *
      * @param list 待删除文章id列表

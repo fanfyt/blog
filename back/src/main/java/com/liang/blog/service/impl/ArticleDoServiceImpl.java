@@ -7,7 +7,6 @@ import com.liang.blog.po.Article;
 import com.liang.blog.service.ArticleDoService;
 import com.liang.blog.service.ArticleService;
 import jakarta.annotation.Resource;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -18,7 +17,6 @@ import java.util.List;
  * @author liang
  */
 @Service
-@Slf4j
 public class ArticleDoServiceImpl implements ArticleDoService {
     private final MongoTemplate mongoTemplate;
     @Resource
@@ -43,12 +41,17 @@ public class ArticleDoServiceImpl implements ArticleDoService {
             ArticleData articleData = mgArticleService.saveArticle(articleModel.getContent());
             return save;
         } catch (Exception e) {
-            log.error(e.getMessage());
             return false;
         }
 
     }
 
+    /**
+     * 根据文章id获取文章
+     *
+     * @param id 文章id
+     * @return
+     */
     @Override
     public ArticleModel getByArticleId(String id) {
 
@@ -62,6 +65,11 @@ public class ArticleDoServiceImpl implements ArticleDoService {
         articleModel.setContent(articleContent);
 
         return articleModel;
+    }
+
+    @Override
+    public List<Object> getArticleContentByAuthorId(Long authorId) {
+        return null;
     }
 
     @Override
