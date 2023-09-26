@@ -1,6 +1,7 @@
 package com.liang.blog.controller;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import com.liang.blog.model.Result;
 import com.liang.blog.po.BlogUserRelate;
 import com.liang.blog.service.IBlogUserRelateService;
@@ -67,7 +68,7 @@ public class BlogUserRelateController {
     public Result addFollow(@PathVariable Long userId, @RequestBody List<Long> addUserIdList) {
 
         List<BlogUserRelate> followList = addUserIdList.stream().map(beFollowedUserId -> new BlogUserRelate(
-                null, userId, beFollowedUserId, LocalDate.now(), null, null
+                null, userId, beFollowedUserId, LocalDate.now(), null, (byte) 1
         )).collect(Collectors.toCollection(() -> new ArrayList<>(addUserIdList.size())));
 
         boolean b = iBlogUserRelateService.saveBatch(followList);
@@ -77,15 +78,15 @@ public class BlogUserRelateController {
     /**
      * 取消关注
      *
-     * @param userId        用户id
-     * @param delUserIdList 被取消关注用户列表
+     * @param userId              用户id
+     * @param disFollowUserIdList 被取消关注用户列表
      */
     @DeleteMapping("/delFollow/{userId}")
-    public Result delFollow(@PathVariable Long userId, @RequestBody List<Long> delUserIdList) {
-        QueryWrapper<BlogUserRelate> queryWrapper = new QueryWrapper<>();
-        queryWrapper.eq("follower_user_id", userId).in("be_followed_user_id", delUserIdList);
-        boolean remove = iBlogUserRelateService.remove(queryWrapper);
-        return Result.sucess(remove);
+    public Result delFollow(@PathVariable Long userId, @RequestBody List<Long> disFollowUserIdList) {
+        UpdateWrapper<BlogUserRelate> updateWrapper = new UpdateWrapper<>();
+        updateWrapper.eq("follower_user_id", userId).in("be_followed_user_id", disFollowUserIdList).set("disfollow_time", LocalDate.now()).set("state", 0);
+        boolean update = iBlogUserRelateService.update(updateWrapper);
+        return Result.sucess(update);
     }
 
 }
