@@ -51,6 +51,18 @@ public class BlogUserRelate implements Serializable {
      */
     private Byte state;
 
+    public BlogUserRelate() {
+    }
+
+    public BlogUserRelate(Long id, Long followerUserId, Long beFollowedUserId, LocalDate followTime, LocalDate disfollowTime, Byte state) {
+        this.id = id;
+        this.followerUserId = followerUserId;
+        this.beFollowedUserId = beFollowedUserId;
+        this.followTime = followTime;
+        this.disfollowTime = disfollowTime;
+        this.state = state;
+    }
+
     public Long getId() {
         return id;
     }
