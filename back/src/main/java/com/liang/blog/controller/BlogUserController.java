@@ -29,6 +29,11 @@ public class BlogUserController {
     private IBlogUserService iBlogUserService;
 
 
+    /**
+     * 根据用户id查询用户信息
+     *
+     * @param id 用户id
+     */
     @GetMapping("/get/{id}")
     public Result get(@PathVariable Long id) {
         QueryWrapper<BlogUser> queryWrapper = new QueryWrapper<>();
