@@ -4,6 +4,7 @@ import com.liang.blog.mongodb.ArticleData;
 import com.liang.blog.po.Article;
 
 /**
+ * 文章模型
  * @author liang
  */
 public class ArticleModel {
