@@ -1,41 +1,24 @@
 <script>
-import Index from "./Index.vue";
-import Login from "./Login.vue";
-import NotFound from "./NotFound.vue";
-import MarkDownEditor from "../public/article/MarkDownEditor.vue";
-
-const routes = {
-  '/': Index,
-  '/login': Login,
-  '/notFound': NotFound,
-  '/markDownEditor': MarkDownEditor,
-}
-
 export default {
-  data() {
-    return {
-      currentPath: window.location.hash
-    }
-  },
-  computed: {
-    currentView() {
-      return routes[this.currentPath.slice(1) || '/'] || NotFound
-    }
-  },
-  mounted() {
-    window.addEventListener('hashchange', () => {
-      this.currentPath = window.location.hash
-    })
-  }
-}
+  name: 'App',
+};
 </script>
 
+<style>
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+</style>
+
 <template>
-  <a href="#/">Index</a>
-  <a href="#/login">Login</a>
-  <a href="#/notfound">NotFound</a>
-  <a href="#/markDownEditor">MarkDownEditor</a>
-  <component :is="currentView"/>
+  <div id="app">
+    <router-view />
+  </div>
 </template>
 
 <style scoped>
