@@ -2,11 +2,16 @@ server:
   port: 8080
 
 spring:
+
+  # 根路径
+  context-path: /api
+
+  # 数据库配置
   datasource:
-    url: jdbc:mariadb://localhost:3316/blog_system_v1
+    url: jdbc:mysql://localhost:3306/blog
     username: root
     password: root
-    driver-class-name: org.mariadb.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
     druid:
       initial-size: 20
@@ -16,6 +21,60 @@ spring:
       host: 127.0.0.1
       port: 27017
       database: mymongo
+
+  # 安全配置
+  security:
+    # 配置OAuth2.0客户端
+    oauth2:
+      client:
+        # 配置OAuth2.0客户端第三方登录注册信息
+        registration:
+          github:
+            enabled: false
+            client-id: 0f0e0d0c-0b0a-09
+            client-secret: 0f0e0d0c-0b0a-09
+            scope: user:email
+            redirect-uri: http://localhost:8080
+            authorization-grant-type: authorization_code
+            client-name: github
+            provider:
+              token-uri: https://github.com/login/oauth/access_token
+              user-info-uri: https://api.github.com/user
+              user-name-attribute: login
+              jwk-set-uri: https://github.com/login/oauth/jwk
+              user-info-authentication-method: header
+              user-info-response-type: json
+              user-info-authentication-scheme: header
+              user-info-authentication-manager-ref: github
+
+  # RabbitMQ配置
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+    address: /
+    template:
+      receive-timeout: 30000
+
+  # Redis配置
+  redis:
+    host: localhost
+    port: 6379
+    password: ""
+    timeout: 30000
+    database: 0
+    ssl: false
+    ssl-certificate-file: ""
+    enabled: false
+
+  # 监控配置
+  management:
+    endpoints:
+      web:
+        exposure:
+          include: "*"
+
 mybatis:
   type-aliases-package: com.liang.blog.po  # 指定MyBatis实体类的包名
   mapper-locations: classpath:mapper/*.xml  # 指定Mapper XML文件的位置，这里假设XML文件放在resources/mapper目录下

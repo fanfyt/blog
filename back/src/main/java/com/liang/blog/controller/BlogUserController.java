@@ -98,5 +98,11 @@ public class BlogUserController {
         return Result.sucess(remove);
     }
 
+    @PostMapping("/add")
+    public Result add(@RequestBody BlogUser blogUser) {
+
+        boolean save = iBlogUserService.save(blogUser);
+        return Result.sucess(save);
+    }
 
 }
