@@ -3,6 +3,7 @@ package com.liang.blog.po;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 
 import java.io.Serializable;
 import java.time.LocalDate;
@@ -15,6 +16,7 @@ import java.time.LocalDate;
  * @author baomidou
  * @since 2023-08-27
  */
+@TableName("liking")
 public class Liking implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -36,7 +38,7 @@ public class Liking implements Serializable {
     private Long articleOrCommentId;
 
     /**
-     * 赞/踩
+     * 赞/踩 0默认状态 1点赞 2踩
      */
     private Byte isLike;
 
