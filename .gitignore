@@ -1,2 +1,25 @@
-blog-front/
-blog-back/
+# Node related
+node_modules/
+dist/
+build/
+.next/
+.cache/
+.env
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# IDEs and editors
+.vscode/
+.idea/
+.project
+.classpath
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# OS junk
+*.swp
